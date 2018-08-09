@@ -16,6 +16,7 @@ def parse_arguments():
     parser.add_argument("--entity_sent", dest="entity_sent", type=str, default=ENTITY_SENT)
     parser.add_argument("--entity_bbox", dest="entity_bbox", type=str, default=ENTITY_BBOX)
     parser.add_argument("--proposed_bbox", dest="proposed_bbox", type=str, default=PROPOSED_BBOX)
+    parser.add_argument("--use_conv_encoder", dest="use_conv_encoder", type=int, default=0)
 
     parser.add_argument("--hidden_dimension", dest="hidden_dimension", type=int, default=HIDDEN_DIMENSION)
     parser.add_argument("--embedding_dimension", dest="embedding_dimension", type=int, default=EMBEDDING_DIMENSION)
@@ -31,7 +32,7 @@ def parse_arguments():
     parser.add_argument("--lambda_1", dest="lambda_1", type=int, default=9)
     parser.add_argument("--lambda_2", dest="lambda_2", type=float, default=0.7)
     parser.add_argument("--dropout", dest="dropout", type=float, default=0.2)
-    parser.add_argument("--validate_every", dest="validate_every", type=int, default=5)
+    parser.add_argument("--validate_every", dest="validate_every", type=int, default=1)
 
     parser.add_argument("--mode", dest="mode", type=int, default=0)
     parser.add_argument("--model_dir", dest="model_dir", type=str, default=MODEL_DIR)
